@@ -1,11 +1,12 @@
 ###############################################################
 # Program:
 #     Milestone 06, Moon Lander
-#     Brother {Burton, Falin, Ercanbrack, Comeau}, CS165
+#     Brother Alvey, CS165
 # Author:
-#     your name here
+#     Alexander Dohms
 # Summary:
-#     Put your summary code here... 
+#     Lunar lander, used as an example of putting classes together
+#	  with an OpenGL graphics display.
 # Above and Beyond
 #     When you submit your final project (not for milestones),
 #     list anything here that you did to go above and beyond
