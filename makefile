@@ -19,8 +19,8 @@ LFLAGS = -lglut -lGLU -lGL
 ###############################################################
 # Build the main Moon Lander game
 ###############################################################
-a.out: driver.o ground.o game.o uiInteract.o uiDraw.o point.o
-	g++ driver.o ground.o game.o uiInteract.o uiDraw.o point.o $(LFLAGS)
+a.out: driver.o ground.o game.o uiInteract.o uiDraw.o point.o lander.o velocity.o
+   g++ driver.o ground.o game.o uiInteract.o uiDraw.o point.o lander.o velocity.o $(LFLAGS)
 	tar -j -cf moonLander.tar makefile *.h *.cpp
 
 ###############################################################
@@ -54,8 +54,10 @@ driver.o: driver.cpp game.h uiInteract.h
 #
 # Then, don't forget to add them to the dependecy list for a.out above.
 #######################################################################
-
-
+	lander.o: lander.h lander.cpp
+				g++ -c lander.cpp
+	velocity.o: velocity.h velocity.cpp
+				g++ -c velocity.cpp
 ###############################################################
 # General rules
 ###############################################################
