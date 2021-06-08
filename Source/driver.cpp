@@ -10,6 +10,7 @@
 #include "game.h"
 #include "uiInteract.h"
 
+
 /*************************************
  * All the interesting work happens here, when
  * I get called back from OpenGL to draw a frame.
@@ -34,6 +35,21 @@ void callBack(const Interface *pUI, void *p)
  *********************************/
 int main(int argc, char ** argv)
 {
+   // Working here on getting the gravity to reflect according to planets.
+//   std::cout << "Choose a planet: " << std::endl;
+//   std::cout << "1.Mercury 2.Venus 3.Earth 4.Mars 5.Jupiter 6.Saturn 7.Uranus 8.Neptune 9.Pluto";
+//   int pChoice;
+//   std::cin >> pChoice;
+//   switch (pChoice)
+//   {
+//      case 1:
+//         game.Gravity
+//         break;
+//
+//      default:
+//         break;
+//   }
+//   
    Point topLeft(-200, 200);
    Point bottomRight(200, -200);
    

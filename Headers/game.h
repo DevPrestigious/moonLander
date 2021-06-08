@@ -24,6 +24,7 @@
 
 #define GRAVITY_AMOUNT 0.1
 
+
 /*****************************************
  * GAME
  * The main game class containing all the state
@@ -40,6 +41,8 @@ public:
       // Set up the initial conditions of the game
       lander.setFuel(FUEL);
    }
+   
+   Game(float gravity);
    
    /*********************************************
     * Function: handleInput
@@ -61,6 +64,10 @@ public:
     *********************************************/
    void draw(const Interface & ui);
    
+   //This will help in setting gravity when the time is ready.
+   float getGravity() const { return gravityAmount;}
+   void setGravity(float gravity) { this->gravityAmount = gravity; }
+   
 private:
    /*********************************************
     * Function: justLanded
@@ -75,6 +82,8 @@ private:
    
    Ground ground;
    Lander lander;
+   
+   float gravityAmount;
    
 };
 
